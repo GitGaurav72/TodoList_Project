@@ -1,0 +1,92 @@
+<!-- <body>
+    <div class="signup-container">
+        <form class="signup-form">
+            <h2>Create Your Account</h2>
+            <div class="flx">
+            <div class = "flx1">
+                <div class="form-group">
+                    <label for="firstname">Firstname:</label>
+                    <input type="text" id="firstname" [(ngModel)]="firstname" [ngModelOptions]="{standalone: true}" name="firstname" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastname">Lastname:</label>
+                    <input type="text" id="lastname" [(ngModel)]="lastname" [ngModelOptions]="{standalone: true}" name="lastname" required>
+                </div>
+            </div>
+            <span class = "flx">
+                <span class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" name="username" required>
+                </span>
+                <span class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" name="email" required>
+                </span>
+            </span>
+            <div class = "flx">
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}"name="password" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <button (click)="signup()" type="submit" class="btn">Sign Up</button>
+            </div>
+            <div class="links">
+                <a href="/login">Already have an account? Log In</a>
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+
+ -->
+
+
+ 
+<div class="container">
+    <div class="signup-box">
+        <h2>Create Your Account</h2>
+        <form>
+            <div class="form-row">
+                <div>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstname">First Name:</label>
+                        <input type="text"  id="firstname" name="firstname" [(ngModel)]="firstname" [ngModelOptions]="{standalone: true}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" id="lastname" name="lastname" [(ngModel)]="lastname" [ngModelOptions]="{standalone: true}" required>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email"id="email" name="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Role:</label><br>
+                        <div class="radio-row">
+                            <input type="radio" id="admin" name="role" value="admin" [(ngModel)]="role" [ngModelOptions]="{standalone: true}" required>
+                            <label for="admin">Admin</label>
+                            <input type="radio" id="user" name="role" value="user" [(ngModel)]="role" [ngModelOptions]="{standalone: true}" required>
+                            <label for="user">User</label>
+                        </div>
+                    </div>
+                    
+                </div>
+            
+            </div>
+            <button type="submit" (click)="signup()" >Sign Up</button>
+        </form>
+        <p>Already have an account? <a routerLink="/login">Login</a></p>
+    </div>
+</div>

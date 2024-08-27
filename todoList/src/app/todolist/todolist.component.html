@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100,0,0" />
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Your Todo List</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="/home" class="nav-link">
+                    <span class="material-symbols-outlined">home</span>
+                    Home
+                </a>
+                <a href="/username/todolist/D" class="nav-link">
+                    <span class="material-symbols-outlined">drafts</span>
+                    Draft
+                </a>
+                <a href="/username/todolist/A" class="nav-link">
+                    <span class="material-symbols-outlined">receipt_long</span>
+                    Todos
+                </a>
+                <a href="/profile/{{this.username}}" class="nav-link">
+                    <span class="material-symbols-outlined">person</span>
+                    Profile
+                </a>
+            </nav>
+        </aside>
+        
+        <main class="todo-container">
+            <h2 *ngIf="status == 'D' ">My Draft To-Do List</h2>
+            <h2 *ngIf="status == 'A' ">My To-Do List</h2>
+            <div class="todos-grid">
+                <div *ngFor="let todo of todos; let i = index">
+                    <div *ngIf="todo.status == status ">
+                        <div class="todo-item">
+                            <div class="inner" (click)="open(todo.id)">
+                              <span class="todo-title">{{ todo.title }}</span>
+                              <span class="todo-date">{{ formatCreatedAt(todo.creationTime) }}</span>
+                            </div>
+                            <div [style.marginTop.px]="7">
+                              <button  class="delete-btn" (click)="onDelete(todo.id, i)">Delete</button>
+                            </div>
+                              
+                          </div>
+                    </div>
+                    
+                </div>
+                
+                <form class="add-todo-form" *ngIf="status == 'A' ">
+                    <input type="text" id="new-todo" [(ngModel)]="newtodo" [ngModelOptions]="{standalone: true}" name="new-todo" placeholder="Add a new task" required>
+                    <button (click)="save()" type="submit" class="btn">Add Task</button>
+                </form>
+            </div>
+        </main>
+        
+
+    </div>
+</body>
+

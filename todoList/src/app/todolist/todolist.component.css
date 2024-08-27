@@ -1,0 +1,194 @@
+/* General body and container styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+/* Header styles */
+header {
+    background-color: #198a92c9;
+    color: white;
+    padding: 5px; /* Reduced padding to make the header smaller */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 14px; /* Adjust font size as needed for your design */
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    margin: 0 10px;
+}
+
+/* Sidebar styles */
+.sidebar {
+    background: #333;
+    color: white;
+    padding: 7px;
+}
+
+.sidebar-nav {
+    list-style: none; /* Removes default list styling */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    font-size: 12px;
+}
+
+.sidebar-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.sidebar-nav a:hover {
+    background-color: #555;
+}
+
+/* Main content styles */
+.todo-container {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-list li {
+    background: white;
+    margin: 10px 0;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.delete-btn {
+    float: right;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.nav-link {
+    text-align: center;
+    display: block;
+    padding: 10px;
+    text-decoration: none; /* Removes underline from links */
+    color: black; /* Text color for links */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-link:hover {
+    background-color: #ddd; /* Hover background color */
+}
+
+.material-symbols-outlined {
+    display: block;
+    margin-bottom: 5px; /* Space between icon and text */
+    font-size: 24px; /* Icon size */
+}
+
+.todos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 10px;
+    margin: 10px;
+    flex-grow: 1;
+    min-width: 250px;  /* Set minimum width for each todo item */
+
+}
+
+.todo-item div {
+    display: flex;
+    /* flex-wrap: wrap; */
+     flex-direction: column; 
+}
+
+.todo-title {
+    font-size: 16px; /* Adjust title font size */
+    font-weight: bold;
+}
+
+.todo-date {
+    font-size: 12px; /* Smaller font size for date */
+    color: gray;
+}
+
+.add-todo-form {
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+.add-todo-form input {
+    flex-grow: 1;
+    margin-right: 10px; /* Margin between input and button */
+    height:28px;
+    width: 146px;
+}
+
+.btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+
+.flexible-width-span {
+    display: inline-block; /* allows min-width and max-width to be applied */
+    font-size: 1;
+    min-width: 100px; /* minimum width */
+    max-width: 300px; /* maximum width */
+    white-space: nowrap; /* prevents text from wrapping */
+    overflow: hidden; /* hides overflowing text */
+    text-overflow: ellipsis; /* adds ellipsis if text overflows */
+}

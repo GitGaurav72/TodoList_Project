@@ -1,0 +1,38 @@
+<div class="main" [formGroup]="form">
+  <div class="form-group">
+    <label for="title"><h2>Title:</h2></label>
+    <input *ngIf="isEditMode" type="text" id="title" formControlName="title" placeholder="Title" required>
+    <h2 *ngIf="!isEditMode">{{ form.controls['title'].value }}</h2>
+  </div>
+  <div class="text-editor-container">
+    <div class="banda">
+    <span><h2>Description:</h2></span>
+    <span><h2 *ngIf="todo.status=='D'">Draft</h2></span>
+  </div>
+    <quill-editor
+      *ngIf="isEditMode"
+      [style]="{'height':'300px', 'width':'100%'}"
+      formControlName="description"
+      [modules]="editorModules"
+      (onContentChanged)="onContentChanged($event)">
+    </quill-editor>
+    <quill-editor
+      *ngIf="!isEditMode"
+      [style]="{'height':'300px', 'width':'100%'}"
+      formControlName="description"
+      [readOnly]="true"
+      [modules]="{}">
+    </quill-editor>
+  </div>
+
+  <div class="container">
+    <div class="flex">
+      <div class="form-group">
+        <button *ngIf="isEditMode" type="submit" class="btn" (click)="onSave('D')">Save as Draft</button>
+        <button *ngIf="isEditMode" type="submit" class="btn" (click)="onSave('A')">Save</button>
+        <button *ngIf="!isEditMode" type="button" class="btn" (click)="toggleEditMode()">Edit</button>
+      </div>
+    </div>
+  </div>
+<!-- </div> -->
+

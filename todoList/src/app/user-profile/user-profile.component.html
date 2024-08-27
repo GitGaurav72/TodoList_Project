@@ -1,0 +1,73 @@
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100,0,0" />
+
+<body>
+   <header>
+    <div class="header-content">
+        <h1>User Profile</h1>
+    </div>
+   </header>
+   <div class="container">
+   <aside class="sidebar">
+    <nav class="sidebar-nav">
+        <a href="/home" class="nav-link">
+            <span class="material-symbols-outlined">home</span>
+            Home
+        </a>
+        <a href="/username/todolist/D" class="nav-link">
+            <span class="material-symbols-outlined">drafts</span>
+            Draft
+        </a>
+        <a href="/username/todolist/A" class="nav-link">
+            <span class="material-symbols-outlined">receipt_long</span>
+            Todos
+        </a>
+        <a href="/profile/{{username}}" class="nav-link">
+            <span class="material-symbols-outlined">person</span>
+            Profile
+        </a>
+    </nav>
+ </aside>
+   <div class="user-profile">
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="flex">
+      <div class="image-container">
+        <img [src]="url"/>
+        <label class="hoverable" for="fileInput">   
+          <div class="hover-text">Choose file</div>
+          <div class="background"></div>
+        </label>
+        <br />
+        <input id="fileInput" type="file" (change)="onSelectFile($event)" class="select-profile-picture" formControlName="profile_pic"/>
+        <span class="message">Tap here to select your picture</span>
+      </div>
+      <div>
+      <div>
+        <label for="firstname" >First Name</label>
+        <input id="firstname" formControlName="firstname" type="text"/>
+      </div>
+      <div>
+        <label for="lastname">Last Name</label>
+        <input id="lastname" formControlName="lastname" type="text" />
+      </div>
+      <div>
+        <label for="username">User Name</label>
+        <input id="username" formControlName="username" type="text" />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" type="email" />
+      </div>
+      <!-- <div>
+        <img [src]="url" alt="url" width="200" height="200">
+        <input type="file" (change)="onSelectFile($event)">
+      </div> -->
+      <button type="submit">Save</button>
+    </div>
+    </form>
+    
+  </div>
+  </div>
+</body>
+
+
+

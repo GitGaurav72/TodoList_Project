@@ -1,0 +1,76 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  width: 85%; /* Adjust the width as needed */
+   margin: 0 auto;  
+  padding: 20px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.flex {
+  display: flex;
+  gap: 10px; /* Adjust the gap between buttons as needed */
+  justify-content: flex-end; /* Align buttons to the right */
+  margin-top: 20px;
+}
+
+.container {
+  text-align: center; /* Center content inside the container */
+}
+
+.text-editor-container {
+  width: 100%; /* Full width inside the main container */
+  margin: 0 auto; /* Center the editor container */
+}
+
+.mat-typography {
+  margin: 0 auto;
+  font: 400 14px / 20px Roboto, sans-serif;
+  letter-spacing: .0178571429em;
+}
+
+.banda{
+  display: flex;
+  gap: 800px;
+}

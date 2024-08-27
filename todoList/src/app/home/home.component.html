@@ -1,0 +1,66 @@
+<header>
+    <div class="header-content">
+      <h1>TodoApp</h1>
+      <nav>
+        <a href="/home">Home</a>
+        <a href="/features">Features</a>
+        <a href="/about">About</a>
+        <ng-container *ngIf="!isLoggedIn; else loggedInTemplate">
+          <a href="/login">Login</a>
+          <a href="/signup" class="special">Sign Up</a>
+        </ng-container>
+        <ng-template #loggedInTemplate>
+          <span>Hello, {{ username ?? 'User' }}</span>
+          <a href="#" (click)="logout()">Logout</a>
+        </ng-template>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <section class="intro">
+      <h2>Welcome to TodoApp</h2>
+      <p>Keep your tasks organized and tracked everywhere you go.</p>
+      <a href="/username/todolist/A" class="btn">Get Started!</a>
+    </section>
+  
+    <section class="features">
+      <article class="feature">
+        <h3>Easy to Use</h3>
+        <p>Simple and intuitive design makes tracking your tasks effortless.</p>
+      </article>
+      <article class="feature">
+        <h3>Always Syncs</h3>
+        <p>Your data is always up to date on every device you own.</p>
+      </article>
+      <article class="feature">
+        <h3>Mobile Friendly</h3>
+        <p>Access your tasks on the go with our fully responsive interface.</p>
+      </article>
+    </section>
+  
+    <section class="testimonials">
+      <h2>What Our Users Say</h2>
+      <div class="testimonial">
+        <p>"I've never felt so organized - TodoApp really helps keep my life on track!"</p>
+        <cite>— Jane Doe, Freelancer</cite>
+      </div>
+      <div class="testimonial">
+        <p>"The best to-do app on the market - and I've tried them all!"</p>
+        <cite>— John Smith, Developer</cite>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="footer-content">
+      <p>TodoApp © 2024</p>
+      <nav>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Support</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </footer>
+  

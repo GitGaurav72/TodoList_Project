@@ -1,0 +1,121 @@
+/* Basic styling for the entire page */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #f9f9f9;
+
+}
+
+/* Header styles */
+header {
+    background-color: #198a92c9;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    margin: 0 10px;
+}
+
+nav a.special {
+    background-color: #ffce00;
+    color: #333;
+    border-radius: 5px;
+}
+
+/* Main content and features sections */
+main {
+    background-image: url('../images/home_page_back.png');
+    padding: 20px;
+    text-align: center;
+}
+
+.intro h2 {
+    color: #333;
+}
+
+.intro p {
+    color: #555;
+}
+
+.btn {
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+
+.features, .testimonials {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.feature, .testimonial {
+    width: 30%;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: white;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.testimonials h2 {
+    width: 100%;
+    text-align: center;
+    color: #333;
+    margin: 20px 0;
+}
+
+.testimonial cite {
+    display: block;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #198a92c9;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 0px;
+}
+
+footer nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .features, .testimonials {
+        flex-direction: column;
+    }
+
+    .feature, .testimonial {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
